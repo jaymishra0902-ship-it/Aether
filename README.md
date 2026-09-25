@@ -1,3 +1,4 @@
+<img width="3840" height="2160" alt="aether-omni-4k" src="https://github.com/user-attachments/assets/b072f18f-2116-4d54-9496-b76753f85d06" />
 # 🌌 Aether Omni Engine
 
 > A high-performance **3D Audio-Visual & Particle Processing Engine** built with modern web technologies.
