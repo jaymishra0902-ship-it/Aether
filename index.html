@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05080d" />
+    <title>Aether-Omni | Bio-photonic field</title>
+  </head>
+  <body>
+    <canvas id="aether-canvas" aria-label="Animated bio-photonic visualization"></canvas>
+    <main class="ui-shell">
+      <p class="eyebrow">WebGPU / live field study</p>
+      <h1>Aether-Omni</h1>
+      <p class="status" id="status">Initializing bio-photonic field...</p>
+      <div class="readout" aria-label="Visualization telemetry">
+        <span>Signal</span>
+        <strong id="signal">--</strong>
+      </div>
+      <section class="hud-panel" aria-label="Field controls">
+        <div class="panel-heading">
+          <span>Field controls</span>
+          <span class="live-dot">LIVE</span>
+        </div>
+        <label class="control-row">
+          <span>Particle density <output id="density-value">68%</output></span>
+          <input id="density" type="range" min="0.15" max="1" step="0.01" value="0.68" />
+        </label>
+        <label class="control-row">
+          <span>Wave distortion <output id="distortion-value">42%</output></span>
+          <input id="distortion" type="range" min="0" max="1" step="0.01" value="0.42" />
+        </label>
+        <label class="control-row">
+          <span>Chromatic field</span>
+          <select id="theme" aria-label="Chromatic field theme">
+            <option value="bio">Bio-Luminescence</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="space">Deep Space</option>
+            <option value="hyper">Hyper Void</option>
+          </select>
+        </label>
+        <div class="toggle-grid">
+          <label class="toggle"><input id="vortex-toggle" type="checkbox" checked /><span>Audio vortex</span></label>
+          <label class="toggle"><input id="plasma-toggle" type="checkbox" checked /><span>Plasma arcs</span></label>
+          <label class="toggle"><input id="depth-toggle" type="checkbox" checked /><span>Depth + blur</span></label>
+          <label class="toggle"><input id="shock-toggle" type="checkbox" checked /><span>Shock bursts</span></label>
+          <label class="toggle"><input id="bloom-toggle" type="checkbox" checked /><span>Bloom glow</span></label>
+          <label class="toggle"><input id="motion-toggle" type="checkbox" checked /><span>Motion blur</span></label>
+          <label class="toggle"><input id="vignette-toggle" type="checkbox" checked /><span>Vignette</span></label>
+          <label class="toggle"><input id="demo-toggle" type="checkbox" /><span>Auto-demo</span></label>
+        </div>
+        <button class="mic-button muted" id="mic-button" type="button">Mic Input [OFF]</button>
+        <button class="mic-button muted" id="camera-button" type="button">Camera Gesture [OFF]</button>
+        <label class="file-button" for="audio-file">Load MP3 / WAV track</label>
+        <input class="file-input" id="audio-file" type="file" accept="audio/mpeg,audio/wav,audio/x-wav,audio/*" />
+        <div class="capture-row">
+          <button class="capture-button" id="snapshot-button" type="button">4K snapshot</button>
+          <button class="capture-button" id="record-button" type="button">Record 10s</button>
+        </div>
+        <p class="hint">Move to attract the field · click to pulse</p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
