@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node -e \"require('fs').readdirSync('node_modules/.bin').forEach(f => require('fs').chmodSync('node_modules/.bin/' + f, 0o755))\"",
     "build": "vite build",
     "preview": "vite preview"
   },
